@@ -1,42 +1,105 @@
-# Color-Recognition-CNN
-Color-Recognition-CNN code and link to dataset
-Description:
+<h1 align="center">Color Recognition in Challenging Lighting Environments</h1>
 
-This repository contains a comprehensive implementation of a Convolutional Neural Network (CNN) designed to recognize different colors in challenging lighting conditions. The model is trained on a custom dataset that includes images of various colors captured under diverse lighting environments. The primary objective is to accurately classify the colors, even when the lighting conditions vary significantly.
+<p align="center">
+  <a href="https://doi.org/10.1109/I2CT61223.2024.10543537"><img src="https://img.shields.io/badge/Paper-IEEE_I2CT-2f6f9f.svg" alt="Paper"></a>
+  <a href="color recognition.py"><img src="https://img.shields.io/badge/Project-color recognition.py-555555.svg" alt="Project entry file"></a>
+  <a href="https://scholar.google.com/citations?user=bvyKhaEAAAAJ&hl=en"><img src="https://img.shields.io/badge/Publications-Google_Scholar-4285F4.svg" alt="Google Scholar"></a>
+  <a href="https://www.kaggle.com/nizamuddinmaitlo"><img src="https://img.shields.io/badge/Profile-Kaggle-20BEFF.svg" alt="Kaggle profile"></a>
+</p>
 
-Key Features:
+<p align="center"><b>Nizamuddin Maitlo, Nooruddin Noonari, Sajid Ahmed Ghanghro, Sathishkumar Duraisamy, and Fayaz Ahmed</b></p>
 
-    Data Preprocessing: Includes scripts for splitting the dataset into training and testing sets, along with image augmentation techniques to enhance the robustness of the model.
+<p align="center">A convolutional neural-network baseline for color classification under lighting variation.</p>
 
-    CNN Model Architecture: A carefully designed CNN with multiple convolutional layers, max-pooling, and dense layers. The model is optimized using the Adam optimizer and is trained to minimize categorical cross-entropy loss.
+## 🔥 Overview
 
-    Model Evaluation: The model's performance is evaluated using accuracy metrics, a confusion matrix, and a classification report. The repository also includes code for plotting the confusion matrix as a heatmap for better visualization.
+This repository contains a TensorFlow/Keras CNN baseline for recognizing color categories under varied lighting. The script creates train and test folders, applies image augmentation, trains a convolutional model, and reports classification metrics and visual diagnostics.
 
-    Visualization: Implements graphical representations of the model's performance, including accuracy and loss curves, as well as a confusion matrix heatmap.
+## ✨ Features
 
-    Dependencies: The project is built using Python, TensorFlow, Keras, NumPy, Matplotlib, Seaborn, and Scikit-learn.
+- Folder-based dataset splitting.
+- Image augmentation for improved robustness.
+- Convolutional architecture trained with categorical cross-entropy.
+- Accuracy and loss curves, confusion matrix, and classification report.
 
-Dataset: The dataset used in this project is available on Kaggle and can be found here. The dataset contains images of various colors under different lighting conditions.
+## 🧪 Method and protocol
 
-Usage:
+- The source dataset must be organized with one folder per color class.
+- The script creates an 80/20 train-test split before fitting the model.
+- Training augmentation is applied only through the training generator.
+- Edit the three path variables near the top of `color recognition.py` before running.
 
-    Clone the repository and navigate to the project directory.
-    Install the required dependencies using pip install -r requirements.txt.
-    Follow the instructions in the Jupyter notebook or Python scripts to train the model on the provided dataset.
-    Evaluate the model's performance using the included test scripts and visualize the results.
+## 📁 Repository contents
 
-Citation:
+| File | Purpose |
+|---|---|
+| `color recognition.py` | Dataset splitting, CNN training, evaluation, and plots |
 
-If you use this code or dataset in your research, please cite the following paper:
+## 🛠️ Setup
 
-N. Maitlo, N. Noonari, S. A. Ghanghro, S. Duraisamy, and F. Ahmed, "Color Recognition in Challenging Lighting Environments: CNN Approach," 2024 IEEE 9th International Conference for Convergence in Technology (I2CT), Pune, India, 2024, pp. 1-7, doi: 10.1109/I2CT61223.2024.10543537.
+Install the dependencies:
 
-Keywords: Image segmentation, Computer vision, Image color analysis, Image edge detection, Neural networks, Lighting, Object segmentation, Deep Learning, Convolutional Neural Network (CNN), Image Segmentation, Color Detection, Object Segmentation
+~~~bash
+python -m pip install tensorflow numpy matplotlib seaborn scikit-learn
+~~~
 
-Applications:
+## 📦 Data and inputs
 
-This model can be used in scenarios where accurate color recognition is essential despite challenging lighting conditions, such as in computer vision systems for robotics, autonomous vehicles, and augmented reality (AR) applications.
+| Resource | Purpose | Availability |
+|---|---|---|
+| Different Colors in Challenging Lightening | Original color-classification image collection | [Kaggle dataset](https://www.kaggle.com/datasets/nizamuddinmaitlo/different-colors-in-challenging-lightening) |
+| Different Colors in Challenging Lightening v2 | Expanded color × illumination collection for newer experiments | [Kaggle dataset](https://www.kaggle.com/datasets/nizamuddinmaitlo/different-colors-in-challenging-lightening-v2) |
 
-License:
+The current script expects a single class-folder hierarchy. If using the v2 color/illumination hierarchy, adapt the indexing logic or select the intended folder level.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🚀 Running the project
+
+Set `dataset_dir`, `train_dir`, and `test_dir` in the script, then run:
+
+~~~bash
+python "color recognition.py"
+~~~
+
+## ♻️ Reproducibility
+
+- Record the Python and library versions used for each run.
+- Keep preprocessing, splits, thresholds, and random seeds fixed when comparing results.
+- Do not commit private input data, generated model weights, or machine-specific paths.
+- Revalidate results when the dataset, sensor, operating environment, or dependency versions change.
+
+## 📚 Paper information
+
+This repository contains the CNN research line associated with the published challenging-light color-recognition study.
+
+| Publication | Venue | Link |
+|---|---|---|
+| Color Recognition in Challenging Lighting Environments: CNN Approach | 2024 IEEE 9th International Conference for Convergence in Technology (I2CT), 1–7 | [DOI](https://doi.org/10.1109/I2CT61223.2024.10543537) |
+
+## ⭐ Citation
+
+~~~bibtex
+@inproceedings{maitlo2024color,
+  title     = {Color Recognition in Challenging Lighting Environments: CNN Approach},
+  author    = {Maitlo, Nizamuddin and Noonari, Nooruddin and Ghanghro, Sajid Ahmed and Duraisamy, Sathishkumar and Ahmed, Fayaz},
+  booktitle = {2024 IEEE 9th International Conference for Convergence in Technology (I2CT)},
+  pages     = {1--7},
+  year      = {2024},
+  doi       = {10.1109/I2CT61223.2024.10543537}
+}
+~~~
+
+A machine-readable [CITATION.cff](CITATION.cff) file is included for GitHub's citation interface.
+
+
+
+## ⚠️ Scope and limitations
+
+The script uses local absolute paths and a simple random file split. Before reporting new results, use dataset-relative paths, verify that near-duplicate images do not cross splits, and evaluate held-out illumination conditions separately.
+
+## 📄 License
+
+No standalone code-license file is currently included in this repository. Dataset and publication terms remain separate.
+
+## 🤝 Acknowledgements
+
+This project uses open-source Python libraries and the data or inputs described above. We thank the original dataset, framework, and software contributors.

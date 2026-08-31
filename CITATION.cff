@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "Color Recognition in Challenging Lighting Environments"
+type: software
+authors:
+  - family-names: Maitlo
+    given-names: Nizamuddin
+  - family-names: Noonari
+    given-names: Nooruddin
+repository-code: "https://github.com/nizamuddin-sjtu/Color-Recognition-CNN"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: Maitlo
+      given-names: Nizamuddin
+    - family-names: Noonari
+      given-names: Nooruddin
+    - family-names: Ghanghro
+      given-names: Sajid Ahmed
+    - family-names: Duraisamy
+      given-names: Sathishkumar
+    - family-names: Ahmed
+      given-names: Fayaz
+  title: "Color Recognition in Challenging Lighting Environments: CNN Approach"
+  collection-title: "2024 IEEE 9th International Conference for Convergence in Technology (I2CT)"
+  year: 2024
+  doi: "10.1109/I2CT61223.2024.10543537"
